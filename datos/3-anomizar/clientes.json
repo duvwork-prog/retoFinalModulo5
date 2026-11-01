@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Constantin Doyle",
+    "email": "hipolito_mills@yahoo.com",
+    "documento": "5042361834",
+    "telefono": "3225354163",
+    "fecha_nacimiento": "1988-01-15"
+  },
+  {
+    "id": 2,
+    "nombre": "Dr. Boris Fritsch-Grady",
+    "email": "elinor28@hotmail.com",
+    "documento": "7830582910",
+    "telefono": "3417785384",
+    "fecha_nacimiento": "1960-01-16"
+  },
+  {
+    "id": 3,
+    "nombre": "Libby Trantow",
+    "email": "sean_legros24@hotmail.com",
+    "documento": "9118942341",
+    "telefono": "3874039800",
+    "fecha_nacimiento": "1956-02-17"
+  },
+  {
+    "id": 4,
+    "nombre": "Elmore Thompson",
+    "email": "robert.stanton@gmail.com",
+    "documento": "7135414422",
+    "telefono": "3221227989",
+    "fecha_nacimiento": "1980-05-28"
+  },
+  {
+    "id": 5,
+    "nombre": "Jaron Schaefer",
+    "email": "eliza_hudson83@hotmail.com",
+    "documento": "2433023088",
+    "telefono": "3711664215",
+    "fecha_nacimiento": "2000-10-18"
+  },
+  {
+    "id": 6,
+    "nombre": "Dr. Clifton Strosin",
+    "email": "josiane_jenkins93@yahoo.com",
+    "documento": "9446339775",
+    "telefono": "3797387171",
+    "fecha_nacimiento": "1966-08-29"
+  },
+  {
+    "id": 7,
+    "nombre": "Casandra Schuppe",
+    "email": "davin.jast94@yahoo.com",
+    "documento": "2525248351",
+    "telefono": "3490897632",
+    "fecha_nacimiento": "2002-10-26"
+  },
+  {
+    "id": 8,
+    "nombre": "Jerald Tromp",
+    "email": "troy25@yahoo.com",
+    "documento": "4616121782",
+    "telefono": "3561367928",
+    "fecha_nacimiento": "1956-08-20"
+  },
+  {
+    "id": 9,
+    "nombre": "Asia Koelpin",
+    "email": "madisen_zieme@yahoo.com",
+    "documento": "2290548092",
+    "telefono": "3763367422",
+    "fecha_nacimiento": "2000-05-30"
+  },
+  {
+    "id": 10,
+    "nombre": "Morgan Mitchell PhD",
+    "email": "zaria.bergstrom@yahoo.com",
+    "documento": "7670586617",
+    "telefono": "3257234276",
+    "fecha_nacimiento": "1984-03-22"
+  },
+  {
+    "id": 11,
+    "nombre": "Mr. Francisco Collier",
+    "email": "shanie_bradtke@yahoo.com",
+    "documento": "7794626290",
+    "telefono": "3923003439",
+    "fecha_nacimiento": "1966-10-20"
+  },
+  {
+    "id": 12,
+    "nombre": "Payton West",
+    "email": "estevan.greenholt11@gmail.com",
+    "documento": "7402098864",
+    "telefono": "3933827440",
+    "fecha_nacimiento": "1948-05-10"
+  },
+  {
+    "id": 13,
+    "nombre": "Jada Kuhn",
+    "email": "gilberto74@yahoo.com",
+    "documento": "2710699284",
+    "telefono": "3027897740",
+    "fecha_nacimiento": "1952-01-22"
+  },
+  {
+    "id": 14,
+    "nombre": "Jabari Daniel",
+    "email": "timmy.jacobson@gmail.com",
+    "documento": "9402702575",
+    "telefono": "3388004100",
+    "fecha_nacimiento": "1964-02-12"
+  },
+  {
+    "id": 15,
+    "nombre": "Ava Gutkowski",
+    "email": "debbie13@gmail.com",
+    "documento": "1990568871",
+    "telefono": "3662935961",
+    "fecha_nacimiento": "1989-12-06"
+  }
+]

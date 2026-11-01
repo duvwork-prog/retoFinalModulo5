@@ -1,0 +1,105 @@
+# Azure Pipelines para app-tienda
+# Origen del código: Azure DevOps > Pipelines > New pipeline > GitHub > seleccionar el repositorio que contenga esta carpeta.
+
+trigger:
+  - main
+
+pr:
+  - main
+
+stages:
+  - stage: Build
+    displayName: Build
+    jobs:
+      - job: BuildJob
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - checkout: self
+
+          - task: NodeTool@0
+            displayName: Use Node.js 20
+            inputs:
+              versionSpec: '20.x'
+
+          - script: |
+              cd $(Build.SourcesDirectory)/app-tienda
+              npm ci
+              node datos/generar-datos.js
+            displayName: Build gate - install dependencies and generate data
+
+  - stage: SmokeTests
+    displayName: SmokeTests
+    dependsOn: Build
+    condition: succeeded()
+    jobs:
+      - job: SmokeJob
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - checkout: self
+
+          - task: NodeTool@0
+            displayName: Use Node.js 20
+            inputs:
+              versionSpec: '20.x'
+
+          - script: |
+              cd $(Build.SourcesDirectory)/app-tienda
+              npm ci
+              nohup npm start > app.log 2>&1 &
+              for i in {1..30}; do
+                curl -fsS http://localhost:3000/api/health >/dev/null && break
+                sleep 2
+              done
+              node tests/smoke-api.js
+            displayName: Smoke gate - health, catalog and create order
+            env:
+              BASE_URL: http://localhost:3000
+
+  - stage: LoadTest
+    displayName: LoadTest
+    dependsOn: SmokeTests
+    condition: succeeded()
+    jobs:
+      - job: LoadGateJob
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - checkout: self
+
+          - task: NodeTool@0
+            displayName: Use Node.js 20
+            inputs:
+              versionSpec: '20.x'
+
+          - script: |
+              cd $(Build.SourcesDirectory)/app-tienda
+              npm ci
+              nohup npm start > app.log 2>&1 &
+              for i in {1..30}; do
+                curl -fsS http://localhost:3000/api/health >/dev/null && break
+                sleep 2
+              done
+              node tests/carga-simple.js
+            displayName: Load gate - p95 < 800 ms and errors < 1%
+            env:
+              BASE_URL: http://localhost:3000
+              CONCURRENCIA: '20'
+              DURACION_S: '6'
+              SLA_P95_MS: '800'
+              SLA_ERROR_PCT: '1'
+
+  - stage: Deploy
+    displayName: Deploy
+    dependsOn: LoadTest
+    condition: succeeded()
+    jobs:
+      - job: DeployJob
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - bash: |
+              echo "Deploy gate passed: Build, SmokeTests and LoadTest succeeded."
+              echo "Deployment step would run here."
+            displayName: Deployment gate

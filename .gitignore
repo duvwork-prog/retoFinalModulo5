@@ -1,0 +1,38 @@
+# Dependencias de Node
+node_modules/
+
+# Lockfile del proyecto (se mantiene si quieres versionarlo)
+# package-lock.json
+
+# Logs
+npm-debug.log*
+logs/
+*.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno local
+.env
+.env.*
+
+# Cobertura / test results
+coverage/
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos generados por ejecuciones locales
+*.tmp
+*.bak
+
+# Datos de salida locales del ejercicio (si no quieres versionarlos)
+# data/
+# *.json
+
+# Archivos de Office temporal
+.~lock.*
