@@ -16,6 +16,12 @@ Thumbs.db
 # Archivos de entorno local
 .env
 .env.*
+.venv/
+**/.venv/
+venv/
+**/venv/
+__pycache__/
+**/__pycache__/
 
 # Cobertura / test results
 coverage/

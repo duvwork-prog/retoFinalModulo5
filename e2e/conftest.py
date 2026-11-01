@@ -54,6 +54,43 @@ def base_url(request):
     )
 
 
+def _remote_ws_endpoint():
+    """Endpoint remoto de Playwright para Sauce Labs o equivalente.
+
+    El valor puede venir directo en PLAYWRIGHT_REMOTE_WS, o generarse a partir de
+    SAUCE_USERNAME y SAUCE_ACCESS_KEY si se usa una instancia de Sauce Labs.
+    """
+    remote_ws = os.environ.get("PLAYWRIGHT_REMOTE_WS")
+    if remote_ws:
+        return remote_ws
+
+    username = os.environ.get("SAUCE_USERNAME")
+    access_key = os.environ.get("SAUCE_ACCESS_KEY")
+    if username and access_key:
+        region = os.environ.get("SAUCE_REGION", "us-west-1")
+        return (
+            f"wss://cdp.{region}.saucelabs.com/playwright?"
+            f"username={username}&accessKey={access_key}"
+        )
+    return None
+
+
+@pytest.fixture(scope="session")
+def browser(playwright):
+    """Soporta ejecucion local o remota sin tocar la logica de los tests."""
+    remote_ws = _remote_ws_endpoint()
+    browser_name = os.environ.get("PLAYWRIGHT_BROWSER_NAME", "chromium")
+    if remote_ws:
+        browser = getattr(playwright, browser_name).connect(ws_endpoint=remote_ws, timeout=120000)
+        yield browser
+        browser.close()
+        return
+
+    browser = getattr(playwright, browser_name).launch()
+    yield browser
+    browser.close()
+
+
 # ── Playwright: activar video y trace ──────────────────────────────
 # pytest-playwright permite configurar el contexto del navegador.
 # Grabamos video de toda la sesion y habilitamos el trace (snapshots +

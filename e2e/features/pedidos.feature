@@ -1,4 +1,4 @@
-# Caso de la suite "Pedidos" de Azure Test Plans (Dia 3).
+# Caso de la suite "Pedidos" de Azure Test Plans.
 # Palabras clave en ingles (Gherkin), texto de los pasos en espanol.
 Feature: Confirmar un pedido
   Como cliente de la tienda
@@ -10,6 +10,6 @@ Feature: Confirmar un pedido
   Scenario: Confirmar un pedido con un producto
     Given que abro la home de la tienda
     And agrego el producto 1 al carrito
-    When abro el carrito y confirmo el pedido con el correo "ana@tienda-qa.com"
+    When abro el carrito y confirmo el pedido con el correo "duvier@tienda-qa.com"
     Then veo el mensaje de pedido confirmado
     And el numero de pedido no esta vacio

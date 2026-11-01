@@ -90,9 +90,46 @@ stages:
               SLA_P95_MS: '800'
               SLA_ERROR_PCT: '1'
 
+  - stage: CloudE2E
+    displayName: CloudE2E
+    dependsOn: LoadTest
+    condition: succeeded()
+    jobs:
+      - job: SauceLabsE2E
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - checkout: self
+
+          - task: UsePythonVersion@0
+            displayName: Use Python 3.12
+            inputs:
+              versionSpec: '3.12'
+
+          - script: |
+              cd $(Build.SourcesDirectory)/e2e
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt
+              python -m playwright install chromium
+            displayName: Install E2E dependencies
+
+          - script: |
+              cd $(Build.SourcesDirectory)/e2e
+              export BASE_URL="$(BASE_URL_CLOUD)"
+              export PLAYWRIGHT_BROWSER_NAME="chromium"
+              export PLAYWRIGHT_REMOTE_WS="$(PLAYWRIGHT_REMOTE_WS)"
+              pytest -q --maxfail=1
+            displayName: Run E2E tests against remote browser
+            env:
+              BASE_URL_CLOUD: $(BASE_URL_CLOUD)
+              PLAYWRIGHT_REMOTE_WS: $(PLAYWRIGHT_REMOTE_WS)
+              SAUCE_USERNAME: $(SAUCE_USERNAME)
+              SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)
+              SAUCE_REGION: $(SAUCE_REGION)
+
   - stage: Deploy
     displayName: Deploy
-    dependsOn: LoadTest
+    dependsOn: CloudE2E
     condition: succeeded()
     jobs:
       - job: DeployJob
@@ -100,6 +137,6 @@ stages:
           vmImage: ubuntu-latest
         steps:
           - bash: |
-              echo "Deploy gate passed: Build, SmokeTests and LoadTest succeeded."
+              echo "Deploy gate passed: Build, SmokeTests, LoadTest and CloudE2E succeeded."
               echo "Deployment step would run here."
             displayName: Deployment gate

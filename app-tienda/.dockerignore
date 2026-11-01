@@ -4,3 +4,7 @@ datos/db.json
 .git
 .gitignore
 *.md
+**/.venv/
+**/.venv/**
+**/venv/
+**/venv/**

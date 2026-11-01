@@ -1,4 +1,4 @@
-# Caso de la suite "Carrito" de Azure Test Plans (Dia 3).
+# Caso de la suite "Carrito" de Azure Test Plans.
 # Palabras clave en ingles (Gherkin), texto de los pasos en espanol.
 Feature: Agregar productos al carrito
   Como cliente de la tienda
@@ -19,4 +19,11 @@ Feature: Agregar productos al carrito
     Given que abro la home de la tienda
     When agrego el producto 1 al carrito
     And agrego el producto 2 al carrito
+    Then el contador del carrito muestra 2
+
+  @carrito @edge
+  Scenario: Agregar el mismo producto dos veces al carrito
+    Given que abro la home de la tienda
+    When agrego el producto 1 al carrito
+    And agrego el producto 1 al carrito
     Then el contador del carrito muestra 2

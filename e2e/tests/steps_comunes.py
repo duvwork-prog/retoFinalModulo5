@@ -15,6 +15,8 @@ from screenplay.questions import (
     NumeroDePedido,
     MensajeDeExitoVisible,
 )
+from screenplay.interactions import Escribir
+from screenplay.abilities import NavegarConElNavegador
 
 
 # ── GIVEN / DADO ──────────────────────────────────────────────────
@@ -27,6 +29,11 @@ def abrir_home(actor):
 @when(parsers.parse('filtro el catalogo por la categoria "{categoria}"'))
 def filtrar_categoria(actor, categoria):
     actor.intenta(FiltrarPorCategoria.llamada(categoria))
+
+
+@when(parsers.parse('busco un producto con el texto "{texto}"'))
+def buscar_producto(actor, texto):
+    actor.intenta(Escribir.el_texto(texto).en("busqueda"))
 
 
 @when(parsers.parse("agrego el producto {producto_id:d} al carrito"))
@@ -52,6 +59,12 @@ def solo_categoria(actor, categoria):
 @then("la cantidad de productos visibles es mayor que cero")
 def hay_productos(actor):
     assert actor.pregunta(ProductosVisibles.cantidad()) > 0
+
+
+@then("no veo resultados en el catalogo")
+def no_veo_resultados(actor):
+    page = actor.habilidad(NavegarConElNavegador).page
+    assert page.get_by_test_id("sin-resultados").is_visible()
 
 
 @then(parsers.parse("el contador del carrito muestra {esperado:d}"))

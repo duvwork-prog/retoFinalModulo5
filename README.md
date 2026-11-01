@@ -116,6 +116,61 @@ El pipeline se encuentra en [app-tienda/pipelines/azure-pipelines.yml](app-tiend
 
 El pipeline está configurado para ejecutarse en cambios en main y en pull requests hacia main.
 
+### Ejemplo de YAML para E2E en Sauce Labs
+
+Si se quiere ejecutar la automatización E2E desde un navegador remoto, el pipeline puede incluir un stage adicional apuntando a Sauce Labs sin cambiar los escenarios. Esto permite reutilizar la misma suite, pero ejecutando Playwright desde un agente cloud y apuntando a una URL pública.
+
+```yaml
+- stage: CloudE2E
+  displayName: CloudE2E
+  dependsOn: LoadTest
+  condition: succeeded()
+  jobs:
+    - job: SauceLabsE2E
+      pool:
+        vmImage: ubuntu-latest
+      steps:
+        - checkout: self
+
+        - task: UsePythonVersion@0
+          displayName: Use Python 3.12
+          inputs:
+            versionSpec: '3.12'
+
+        - script: |
+            cd $(Build.SourcesDirectory)/e2e
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+            python -m playwright install chromium
+          displayName: Install E2E dependencies
+
+        - script: |
+            cd $(Build.SourcesDirectory)/e2e
+            export BASE_URL="$(BASE_URL_CLOUD)"
+            export PLAYWRIGHT_BROWSER_NAME="chromium"
+            export PLAYWRIGHT_REMOTE_WS="$(PLAYWRIGHT_REMOTE_WS)"
+            pytest -q --maxfail=1
+          displayName: Run E2E tests against remote browser
+          env:
+            BASE_URL_CLOUD: $(BASE_URL_CLOUD)
+            PLAYWRIGHT_REMOTE_WS: $(PLAYWRIGHT_REMOTE_WS)
+            SAUCE_USERNAME: $(SAUCE_USERNAME)
+            SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)
+            SAUCE_REGION: $(SAUCE_REGION)
+```
+
+Variables típicas en Azure DevOps:
+
+```text
+BASE_URL_CLOUD=https://tu-app-desplegada.example.com
+PLAYWRIGHT_REMOTE_WS=wss://cdp.us-west-1.saucelabs.com/playwright?username=TU_USUARIO&accessKey=TU_ACCESS_KEY
+SAUCE_USERNAME=TU_USUARIO
+SAUCE_ACCESS_KEY=TU_ACCESS_KEY
+SAUCE_REGION=us-west-1
+```
+
+En local, la ejecución sigue siendo con `http://localhost:3000`; en Sauce Labs, la app debe ser accesible desde internet y Playwright se conecta al navegador remoto usando el WebSocket de Sauce.
+
 ## 7. Integración con GitHub
 
 La conexión con GitHub se realiza desde Azure DevOps seleccionando el repositorio correcto como origen del código. Una vez conectado, el YAML del pipeline queda asociado al repositorio y cada push o PR puede activar la ejecución.

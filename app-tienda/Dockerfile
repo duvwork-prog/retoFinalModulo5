@@ -12,15 +12,16 @@ FROM node:20-alpine
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# 1) Copiar solo package.json primero (mejor cache de capas):
-#    si el codigo cambia pero las deps no, no reinstala.
+# 1) Copiar solo package.json y los archivos necesarios para que el postinstall
+#    pueda generar datos/db.json sin fallar.
 COPY package*.json ./
+COPY datos ./datos
 
 # 2) Instalar dependencias de produccion.
 #    El "postinstall" genera datos/db.json con Faker automaticamente.
 RUN npm install --omit=dev
 
-# 3) Copiar el resto del proyecto (servidor + front + datos).
+# 3) Copiar el resto del proyecto (servidor + front + assets adicionales).
 COPY . .
 
 # 4) Regenerar los datos por si el COPY trajo un db.json viejo o ninguno.

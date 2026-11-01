@@ -7,8 +7,7 @@
   },
   "interactions": [
     {
-      "description": "una peticion del producto 1",
-      "providerState": "existe el producto 1",
+      "description": "una petición para consultar el producto 1",
       "request": {
         "method": "get",
         "path": "/api/productos/1"
@@ -19,11 +18,10 @@
         },
         "body": {
           "id": 1,
-          "nombre": "Tasty Concrete Chair",
+          "nombre": "Silla ergonómica",
           "categoria": "hogar",
-          "precio": 106.25,
-          "descripcion": "Rohan LLC's most advanced Sausages technology increases actual capabilities",
-          "stock": 5
+          "precio": 99.99,
+          "stock": 10
         },
         "matchingRules": {
           "$.body.id": {
@@ -36,9 +34,6 @@
             "match": "type"
           },
           "$.body.precio": {
-            "match": "type"
-          },
-          "$.body.descripcion": {
             "match": "type"
           },
           "$.body.stock": {
