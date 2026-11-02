@@ -4,8 +4,8 @@ import { performance } from 'node:perf_hooks';
 
 const port = Number(process.env.PORT || 3100);
 const baseUrl = `http://127.0.0.1:${port}`;
-const targetP95 = Number(process.env.SLA_P95_MS ?? 800);
-const targetErrorRate = Number(process.env.SLA_ERROR_RATE ?? 0.01);
+const targetP95 = Number(process.env.SLA_P95_MS ?? 1);
+const targetErrorRate = Number(process.env.SLA_ERROR_RATE ?? 0.0001);
 const totalRequests = Number(process.env.LOAD_REQUESTS ?? 120);
 const concurrency = Number(process.env.LOAD_CONCURRENCY ?? 6);
 

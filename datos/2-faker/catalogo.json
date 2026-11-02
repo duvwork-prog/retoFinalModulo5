@@ -2,26 +2,26 @@
   "catalogo": [
     {
       "id": 1,
-      "nombre": "Silla ergonómica",
-      "categoria": "Muebles",
+      "nombre": "Mancuerna 10kg",
+      "categoria": "juguetes",
       "precio": 158.35,
       "stock": 120,
       "sku": "SKU-00001",
-      "descripcion": "Silla ergonómica de alta calidad para uso diario."
+      "descripcion": "Mancuerna 10kg de alta calidad para uso diario."
     },
     {
       "id": 2,
-      "nombre": "Estantería modular",
-      "categoria": "Muebles",
+      "nombre": "Raqueta de tenis",
+      "categoria": "juguetes",
       "precio": 567.95,
       "stock": 193,
       "sku": "SKU-00002",
-      "descripcion": "Estantería modular de alta calidad para uso diario."
+      "descripcion": "Raqueta de tenis de alta calidad para uso diario."
     },
     {
       "id": 3,
       "nombre": "Lámpara LED",
-      "categoria": "Hogar",
+      "categoria": "hogar",
       "precio": 241.5,
       "stock": 175,
       "sku": "SKU-00003",
@@ -29,26 +29,26 @@
     },
     {
       "id": 4,
-      "nombre": "Sofá minimalista",
-      "categoria": "Muebles",
+      "nombre": "Gorra deportiva",
+      "categoria": "juguetes",
       "precio": 490.89,
       "stock": 67,
       "sku": "SKU-00004",
-      "descripcion": "Sofá minimalista de alta calidad para uso diario."
+      "descripcion": "Gorra deportiva de alta calidad para uso diario."
     },
     {
       "id": 5,
-      "nombre": "Cargador USB-C",
-      "categoria": "Electrónica",
+      "nombre": "Sudadera",
+      "categoria": "ropa",
       "precio": 745.65,
       "stock": 36,
       "sku": "SKU-00005",
-      "descripcion": "Cargador USB-C de alta calidad para uso diario."
+      "descripcion": "Sudadera de alta calidad para uso diario."
     },
     {
       "id": 6,
       "nombre": "Plato de cerámica",
-      "categoria": "Hogar",
+      "categoria": "hogar",
       "precio": 680.29,
       "stock": 107,
       "sku": "SKU-00006",
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "nombre": "Auriculares inalámbricos",
-      "categoria": "Electrónica",
+      "categoria": "tecnologia",
       "precio": 673.9,
       "stock": 102,
       "sku": "SKU-00007",
@@ -65,35 +65,35 @@
     },
     {
       "id": 8,
-      "nombre": "Mesa de centro",
-      "categoria": "Muebles",
+      "nombre": "Pelota de fútbol",
+      "categoria": "juguetes",
       "precio": 183.79,
       "stock": 93,
       "sku": "SKU-00008",
-      "descripcion": "Mesa de centro de alta calidad para uso diario."
+      "descripcion": "Pelota de fútbol de alta calidad para uso diario."
     },
     {
       "id": 9,
-      "nombre": "Mancuerna 10kg",
-      "categoria": "Deportes",
+      "nombre": "Teclado mecánico",
+      "categoria": "tecnologia",
       "precio": 410.35,
       "stock": 186,
       "sku": "SKU-00009",
-      "descripcion": "Mancuerna 10kg de alta calidad para uso diario."
+      "descripcion": "Teclado mecánico de alta calidad para uso diario."
     },
     {
       "id": 10,
-      "nombre": "Pelota de fútbol",
-      "categoria": "Deportes",
+      "nombre": "Auriculares inalámbricos",
+      "categoria": "tecnologia",
       "precio": 379.9,
       "stock": 183,
       "sku": "SKU-00010",
-      "descripcion": "Pelota de fútbol de alta calidad para uso diario."
+      "descripcion": "Auriculares inalámbricos de alta calidad para uso diario."
     },
     {
       "id": 11,
       "nombre": "Pantalón casual",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 437.09,
       "stock": 139,
       "sku": "SKU-00011",
@@ -102,7 +102,7 @@
     {
       "id": 12,
       "nombre": "Raqueta de tenis",
-      "categoria": "Deportes",
+      "categoria": "juguetes",
       "precio": 730.6,
       "stock": 101,
       "sku": "SKU-00012",
@@ -111,7 +111,7 @@
     {
       "id": 13,
       "nombre": "Sudadera",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 390.39,
       "stock": 159,
       "sku": "SKU-00013",
@@ -119,17 +119,17 @@
     },
     {
       "id": 14,
-      "nombre": "Smartwatch",
-      "categoria": "Electrónica",
+      "nombre": "Bufanda",
+      "categoria": "ropa",
       "precio": 710.49,
       "stock": 145,
       "sku": "SKU-00014",
-      "descripcion": "Smartwatch de alta calidad para uso diario."
+      "descripcion": "Bufanda de alta calidad para uso diario."
     },
     {
       "id": 15,
       "nombre": "Chaqueta ligera",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 189.25,
       "stock": 64,
       "sku": "SKU-00015",
@@ -138,7 +138,7 @@
     {
       "id": 16,
       "nombre": "Gorra deportiva",
-      "categoria": "Deportes",
+      "categoria": "juguetes",
       "precio": 643.09,
       "stock": 183,
       "sku": "SKU-00016",
@@ -147,7 +147,7 @@
     {
       "id": 17,
       "nombre": "Sudadera",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 676.19,
       "stock": 61,
       "sku": "SKU-00017",
@@ -155,26 +155,26 @@
     },
     {
       "id": 18,
-      "nombre": "Pelota de fútbol",
-      "categoria": "Deportes",
+      "nombre": "Auriculares inalámbricos",
+      "categoria": "tecnologia",
       "precio": 128.65,
       "stock": 172,
       "sku": "SKU-00018",
-      "descripcion": "Pelota de fútbol de alta calidad para uso diario."
+      "descripcion": "Auriculares inalámbricos de alta calidad para uso diario."
     },
     {
       "id": 19,
-      "nombre": "Raqueta de tenis",
-      "categoria": "Deportes",
+      "nombre": "Altavoz Bluetooth",
+      "categoria": "tecnologia",
       "precio": 540.52,
       "stock": 90,
       "sku": "SKU-00019",
-      "descripcion": "Raqueta de tenis de alta calidad para uso diario."
+      "descripcion": "Altavoz Bluetooth de alta calidad para uso diario."
     },
     {
       "id": 20,
       "nombre": "Organizador de cocina",
-      "categoria": "Hogar",
+      "categoria": "hogar",
       "precio": 497.85,
       "stock": 99,
       "sku": "SKU-00020",
@@ -182,35 +182,35 @@
     },
     {
       "id": 21,
-      "nombre": "Estantería modular",
-      "categoria": "Muebles",
+      "nombre": "Raqueta de tenis",
+      "categoria": "juguetes",
       "precio": 77.35,
       "stock": 189,
       "sku": "SKU-00021",
-      "descripcion": "Estantería modular de alta calidad para uso diario."
+      "descripcion": "Raqueta de tenis de alta calidad para uso diario."
     },
     {
       "id": 22,
-      "nombre": "Teclado mecánico",
-      "categoria": "Electrónica",
+      "nombre": "Pantalón casual",
+      "categoria": "ropa",
       "precio": 95.69,
       "stock": 8,
       "sku": "SKU-00022",
-      "descripcion": "Teclado mecánico de alta calidad para uso diario."
+      "descripcion": "Pantalón casual de alta calidad para uso diario."
     },
     {
       "id": 23,
-      "nombre": "Gorra deportiva",
-      "categoria": "Deportes",
+      "nombre": "Cargador USB-C",
+      "categoria": "tecnologia",
       "precio": 554.19,
       "stock": 182,
       "sku": "SKU-00023",
-      "descripcion": "Gorra deportiva de alta calidad para uso diario."
+      "descripcion": "Cargador USB-C de alta calidad para uso diario."
     },
     {
       "id": 24,
       "nombre": "Pelota de fútbol",
-      "categoria": "Deportes",
+      "categoria": "juguetes",
       "precio": 251.79,
       "stock": 33,
       "sku": "SKU-00024",
@@ -220,26 +220,26 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Silla ergonómica",
-      "categoria": "Muebles",
+      "nombre": "Mancuerna 10kg",
+      "categoria": "juguetes",
       "precio": 158.35,
       "stock": 120,
       "sku": "SKU-00001",
-      "descripcion": "Silla ergonómica de alta calidad para uso diario."
+      "descripcion": "Mancuerna 10kg de alta calidad para uso diario."
     },
     {
       "id": 2,
-      "nombre": "Estantería modular",
-      "categoria": "Muebles",
+      "nombre": "Raqueta de tenis",
+      "categoria": "juguetes",
       "precio": 567.95,
       "stock": 193,
       "sku": "SKU-00002",
-      "descripcion": "Estantería modular de alta calidad para uso diario."
+      "descripcion": "Raqueta de tenis de alta calidad para uso diario."
     },
     {
       "id": 3,
       "nombre": "Lámpara LED",
-      "categoria": "Hogar",
+      "categoria": "hogar",
       "precio": 241.5,
       "stock": 175,
       "sku": "SKU-00003",
@@ -247,26 +247,26 @@
     },
     {
       "id": 4,
-      "nombre": "Sofá minimalista",
-      "categoria": "Muebles",
+      "nombre": "Gorra deportiva",
+      "categoria": "juguetes",
       "precio": 490.89,
       "stock": 67,
       "sku": "SKU-00004",
-      "descripcion": "Sofá minimalista de alta calidad para uso diario."
+      "descripcion": "Gorra deportiva de alta calidad para uso diario."
     },
     {
       "id": 5,
-      "nombre": "Cargador USB-C",
-      "categoria": "Electrónica",
+      "nombre": "Sudadera",
+      "categoria": "ropa",
       "precio": 745.65,
       "stock": 36,
       "sku": "SKU-00005",
-      "descripcion": "Cargador USB-C de alta calidad para uso diario."
+      "descripcion": "Sudadera de alta calidad para uso diario."
     },
     {
       "id": 6,
       "nombre": "Plato de cerámica",
-      "categoria": "Hogar",
+      "categoria": "hogar",
       "precio": 680.29,
       "stock": 107,
       "sku": "SKU-00006",
@@ -275,7 +275,7 @@
     {
       "id": 7,
       "nombre": "Auriculares inalámbricos",
-      "categoria": "Electrónica",
+      "categoria": "tecnologia",
       "precio": 673.9,
       "stock": 102,
       "sku": "SKU-00007",
@@ -283,35 +283,35 @@
     },
     {
       "id": 8,
-      "nombre": "Mesa de centro",
-      "categoria": "Muebles",
+      "nombre": "Pelota de fútbol",
+      "categoria": "juguetes",
       "precio": 183.79,
       "stock": 93,
       "sku": "SKU-00008",
-      "descripcion": "Mesa de centro de alta calidad para uso diario."
+      "descripcion": "Pelota de fútbol de alta calidad para uso diario."
     },
     {
       "id": 9,
-      "nombre": "Mancuerna 10kg",
-      "categoria": "Deportes",
+      "nombre": "Teclado mecánico",
+      "categoria": "tecnologia",
       "precio": 410.35,
       "stock": 186,
       "sku": "SKU-00009",
-      "descripcion": "Mancuerna 10kg de alta calidad para uso diario."
+      "descripcion": "Teclado mecánico de alta calidad para uso diario."
     },
     {
       "id": 10,
-      "nombre": "Pelota de fútbol",
-      "categoria": "Deportes",
+      "nombre": "Auriculares inalámbricos",
+      "categoria": "tecnologia",
       "precio": 379.9,
       "stock": 183,
       "sku": "SKU-00010",
-      "descripcion": "Pelota de fútbol de alta calidad para uso diario."
+      "descripcion": "Auriculares inalámbricos de alta calidad para uso diario."
     },
     {
       "id": 11,
       "nombre": "Pantalón casual",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 437.09,
       "stock": 139,
       "sku": "SKU-00011",
@@ -320,7 +320,7 @@
     {
       "id": 12,
       "nombre": "Raqueta de tenis",
-      "categoria": "Deportes",
+      "categoria": "juguetes",
       "precio": 730.6,
       "stock": 101,
       "sku": "SKU-00012",
@@ -329,7 +329,7 @@
     {
       "id": 13,
       "nombre": "Sudadera",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 390.39,
       "stock": 159,
       "sku": "SKU-00013",
@@ -337,17 +337,17 @@
     },
     {
       "id": 14,
-      "nombre": "Smartwatch",
-      "categoria": "Electrónica",
+      "nombre": "Bufanda",
+      "categoria": "ropa",
       "precio": 710.49,
       "stock": 145,
       "sku": "SKU-00014",
-      "descripcion": "Smartwatch de alta calidad para uso diario."
+      "descripcion": "Bufanda de alta calidad para uso diario."
     },
     {
       "id": 15,
       "nombre": "Chaqueta ligera",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 189.25,
       "stock": 64,
       "sku": "SKU-00015",
@@ -356,7 +356,7 @@
     {
       "id": 16,
       "nombre": "Gorra deportiva",
-      "categoria": "Deportes",
+      "categoria": "juguetes",
       "precio": 643.09,
       "stock": 183,
       "sku": "SKU-00016",
@@ -365,7 +365,7 @@
     {
       "id": 17,
       "nombre": "Sudadera",
-      "categoria": "Ropa",
+      "categoria": "ropa",
       "precio": 676.19,
       "stock": 61,
       "sku": "SKU-00017",
@@ -373,26 +373,26 @@
     },
     {
       "id": 18,
-      "nombre": "Pelota de fútbol",
-      "categoria": "Deportes",
+      "nombre": "Auriculares inalámbricos",
+      "categoria": "tecnologia",
       "precio": 128.65,
       "stock": 172,
       "sku": "SKU-00018",
-      "descripcion": "Pelota de fútbol de alta calidad para uso diario."
+      "descripcion": "Auriculares inalámbricos de alta calidad para uso diario."
     },
     {
       "id": 19,
-      "nombre": "Raqueta de tenis",
-      "categoria": "Deportes",
+      "nombre": "Altavoz Bluetooth",
+      "categoria": "tecnologia",
       "precio": 540.52,
       "stock": 90,
       "sku": "SKU-00019",
-      "descripcion": "Raqueta de tenis de alta calidad para uso diario."
+      "descripcion": "Altavoz Bluetooth de alta calidad para uso diario."
     },
     {
       "id": 20,
       "nombre": "Organizador de cocina",
-      "categoria": "Hogar",
+      "categoria": "hogar",
       "precio": 497.85,
       "stock": 99,
       "sku": "SKU-00020",
@@ -400,35 +400,35 @@
     },
     {
       "id": 21,
-      "nombre": "Estantería modular",
-      "categoria": "Muebles",
+      "nombre": "Raqueta de tenis",
+      "categoria": "juguetes",
       "precio": 77.35,
       "stock": 189,
       "sku": "SKU-00021",
-      "descripcion": "Estantería modular de alta calidad para uso diario."
+      "descripcion": "Raqueta de tenis de alta calidad para uso diario."
     },
     {
       "id": 22,
-      "nombre": "Teclado mecánico",
-      "categoria": "Electrónica",
+      "nombre": "Pantalón casual",
+      "categoria": "ropa",
       "precio": 95.69,
       "stock": 8,
       "sku": "SKU-00022",
-      "descripcion": "Teclado mecánico de alta calidad para uso diario."
+      "descripcion": "Pantalón casual de alta calidad para uso diario."
     },
     {
       "id": 23,
-      "nombre": "Gorra deportiva",
-      "categoria": "Deportes",
+      "nombre": "Cargador USB-C",
+      "categoria": "tecnologia",
       "precio": 554.19,
       "stock": 182,
       "sku": "SKU-00023",
-      "descripcion": "Gorra deportiva de alta calidad para uso diario."
+      "descripcion": "Cargador USB-C de alta calidad para uso diario."
     },
     {
       "id": 24,
       "nombre": "Pelota de fútbol",
-      "categoria": "Deportes",
+      "categoria": "juguetes",
       "precio": 251.79,
       "stock": 33,
       "sku": "SKU-00024",

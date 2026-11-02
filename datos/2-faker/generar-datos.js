@@ -22,11 +22,10 @@ const SEMILLA = 12345;
 faker.seed(SEMILLA);
 
 const categorias = [
-  { nombre: 'Hogar', productos: ['Lámpara LED', 'Cafetera', 'Juego de sábanas', 'Tetera', 'Plato de cerámica', 'Organizador de cocina'] },
-  { nombre: 'Ropa', productos: ['Camiseta básica', 'Pantalón casual', 'Chaqueta ligera', 'Zapatillas urbanas', 'Sudadera', 'Bufanda'] },
-  { nombre: 'Electrónica', productos: ['Auriculares inalámbricos', 'Teclado mecánico', 'Monitor 24"', 'Altavoz Bluetooth', 'Cargador USB-C', 'Smartwatch'] },
-  { nombre: 'Deportes', productos: ['Pelota de fútbol', 'Mancuerna 10kg', 'Botella de hidratación', 'Raqueta de tenis', 'Gorra deportiva', 'Mochila de senderismo'] },
-  { nombre: 'Muebles', productos: ['Mesa de centro', 'Silla ergonómica', 'Escritorio compacto', 'Estantería modular', 'Sofá minimalista', 'Velador'] }
+  { nombre: 'hogar', productos: ['Lámpara LED', 'Cafetera', 'Juego de sábanas', 'Tetera', 'Plato de cerámica', 'Organizador de cocina'] },
+  { nombre: 'ropa', productos: ['Camiseta básica', 'Pantalón casual', 'Chaqueta ligera', 'Zapatillas urbanas', 'Sudadera', 'Bufanda'] },
+  { nombre: 'tecnologia', productos: ['Auriculares inalámbricos', 'Teclado mecánico', 'Monitor 24"', 'Altavoz Bluetooth', 'Cargador USB-C', 'Smartwatch'] },
+  { nombre: 'juguetes', productos: ['Pelota de fútbol', 'Mancuerna 10kg', 'Botella de hidratación', 'Raqueta de tenis', 'Gorra deportiva', 'Mochila de senderismo'] }
 ];
 
 function crearProducto(id) {
